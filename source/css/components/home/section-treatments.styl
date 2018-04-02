@@ -1,0 +1,68 @@
+.treatments
+    width 100%
+    padding 7rem 0
+    border-bottom 1px solid #e6e6e6
+    .grid-treatments
+        width 100%
+        display flex
+    h2
+        font-size 2.4rem
+        font-weight bold
+        flex-basis 15rem
+        color: $color.primary
+        padding-bottom 1rem
+        position relative
+        align-self: flex-start
+        &:after
+            position absolute
+            bottom 0
+            left 0
+            content ''
+            width 3rem
+            height 5px
+            border-radius 2px
+            background: $color.secundary
+    .carousel
+        flex: 1
+        overflow hidden
+        padding 0 0 2rem 7rem
+    .owl-stage
+        display: flex
+        justify-content: space-between
+        height: 100%
+        +between(1050px, 1150px)
+            left: -5rem
+        +below(1050px)
+            left: -12rem
+    .owl-item
+        display flex
+        justify-content: flex-end
+    .owl-nav, .owl-dots
+        display: none
+
+    .item
+        width 30rem
+        border: 1px solid #e6e6e6
+        border-radius 5px
+        display flex
+        flex-direction column
+        position relative
+        figure
+            width 100%
+            height 20rem
+            border-radius 5px 5px 0 0
+            overflow hidden
+        .info
+            width 100%
+            padding: 2rem 2rem 3rem
+            h3
+                font-size 3.5rem
+                color: $color.primary
+                margin-bottom 2rem
+            p 
+                font-size 1.6rem
+                color: $color.text
+                font-family: $font-family.secondary
+
+    .owl-nav, .owl-dots
+        display none
