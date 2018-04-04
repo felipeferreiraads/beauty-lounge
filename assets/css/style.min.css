@@ -2997,10 +2997,11 @@ body.swal2-iosfix {
   max-width: 100%;
   padding: 8em 0 5rem;
   background: url("../img/bg-blog-home.png") left bottom no-repeat;
-  background-size: 35%;
+  background-size: 500px;
 }
 .grid-blog-home {
-  width: 80%;
+  width: 102.4rem;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -3187,7 +3188,8 @@ footer .grid-footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 50%;
+  width: 64rem;
+  max-width: 100%;
   margin: 0 auto;
 }
 footer .top {
