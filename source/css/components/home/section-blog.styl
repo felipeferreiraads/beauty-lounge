@@ -1,16 +1,22 @@
 .blog-home
     width: 100%
-    padding: 10rem 0 7rem
-    background: $color.primary
+    background-image: linear-gradient(to right, $color.secundary, #c83d8c, #ce5198)
+    .container
+        max-width 100%
+        padding: 8em 0 5rem
+        background: url(../img/bg-blog-home.png) left bottom no-repeat
+        background-size 35%
 
 .grid-blog-home
-    width: 100%
+    width: 80%
     display: flex
     justify-content: space-between
+    margin 0 auto
+    padding-left 10%
     & .left
         flex-basis: 14%
         & h2
-            font-size: 9rem
+            font-size: 5rem
             font-weight: 800
             color: $color.white
         & a
@@ -32,7 +38,7 @@
                 background: #c4edff
     
     & .right
-        flex-basis: 90rem
+        flex-basis: 70rem
         +below(1150px)
             flex-basis: 100%
         & .post
@@ -46,8 +52,8 @@
             &:hover
                 background: $color.primaryhover
             & figure
-                width: 41rem
-                height: 24rem
+                width: 30rem
+                height: 18rem
                 border-radius: 5px
                 overflow: hidden
                 & img 
@@ -68,10 +74,10 @@
                     text-transform: uppercase
                     margin-bottom: 1.5rem
                 & h3
-                    font-size: 3rem
+                    font-size: 2rem
                     font-weight: 800
                     color: $color.white
                     margin-bottom: 1.5rem
                 & p
-                    font: 1.8rem/2.5rem 'Noto Sans'
+                    font: 1.4rem/2.5rem 'Noto Sans'
                     color: $color.white

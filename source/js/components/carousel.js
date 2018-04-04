@@ -23,7 +23,7 @@ $('.carousel').owlCarousel({
             items:2
         },
         1150:{
-            items:3
+            items:2
         },
         1550:{
             items: 3

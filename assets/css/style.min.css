@@ -2991,19 +2991,26 @@ body.swal2-iosfix {
 }
 .blog-home {
   width: 100%;
-  padding: 10rem 0 7rem;
-  background: #c83d8c;
+  background-image: linear-gradient(to right, #873c8f, #c83d8c, #ce5198);
+}
+.blog-home .container {
+  max-width: 100%;
+  padding: 8em 0 5rem;
+  background: url("../img/bg-blog-home.png") left bottom no-repeat;
+  background-size: 35%;
 }
 .grid-blog-home {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  padding-left: 10%;
 }
 .grid-blog-home .left {
   flex-basis: 14%;
 }
 .grid-blog-home .left h2 {
-  font-size: 9rem;
+  font-size: 5rem;
   font-weight: 800;
   color: #fff;
 }
@@ -3027,7 +3034,7 @@ body.swal2-iosfix {
   background: #c4edff;
 }
 .grid-blog-home .right {
-  flex-basis: 90rem;
+  flex-basis: 70rem;
 }
 @media only screen and (max-width: 1150px) {
   .grid-blog-home .right {
@@ -3047,8 +3054,8 @@ body.swal2-iosfix {
   background: #a42e71;
 }
 .grid-blog-home .right .post figure {
-  width: 41rem;
-  height: 24rem;
+  width: 30rem;
+  height: 18rem;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -3073,18 +3080,18 @@ body.swal2-iosfix {
   margin-bottom: 1.5rem;
 }
 .grid-blog-home .right .post .info h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 800;
   color: #fff;
   margin-bottom: 1.5rem;
 }
 .grid-blog-home .right .post .info p {
-  font: 1.8rem/2.5rem 'Noto Sans';
+  font: 1.4rem/2.5rem 'Noto Sans';
   color: #fff;
 }
 .treatments {
   width: 100%;
-  padding: 7rem 0;
+  padding: 10rem 0;
   border-bottom: 1px solid #e6e6e6;
 }
 .treatments .grid-treatments {
@@ -3113,7 +3120,7 @@ body.swal2-iosfix {
 .treatments .carousel {
   flex: 1;
   overflow: hidden;
-  padding: 0 0 2rem 7rem;
+  padding: 0 0 2rem 0;
 }
 .treatments .owl-stage {
   display: flex;
@@ -3139,21 +3146,20 @@ body.swal2-iosfix {
   display: none;
 }
 .treatments .item {
-  width: 30rem;
+  width: 50rem;
   border: 1px solid #e6e6e6;
-  border-radius: 5px;
+  border-radius: 20rem 5px 5px 20rem;
   display: flex;
-  flex-direction: column;
   position: relative;
 }
 .treatments .item figure {
-  width: 100%;
+  width: 20rem;
   height: 20rem;
-  border-radius: 5px 5px 0 0;
+  border-radius: 20rem;
   overflow: hidden;
 }
 .treatments .item .info {
-  width: 100%;
+  flex: 1;
   padding: 2rem 2rem 3rem;
 }
 .treatments .item .info h3 {
