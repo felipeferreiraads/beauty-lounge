@@ -12,7 +12,6 @@ if(width > 1050 && width <= 1150){
 
 $('.carousel').owlCarousel({
     items: 3,
-    dots: false,
     navigation : false,
     //stagePadding: stagePadding,
     responsive:{
@@ -29,4 +28,12 @@ $('.carousel').owlCarousel({
             items: 3
         }
     }
+})
+
+$('.prev').click(function () {
+    $('.carousel').trigger('prev.owl.carousel', [300])
+})
+
+$('.next').click(function () {
+    $('.carousel').trigger('next.owl.carousel')
 })
