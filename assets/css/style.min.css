@@ -589,10 +589,10 @@ textarea {
   text-align: center !important;
 }
 ._font-family-primary {
-  font-family: 'Signika' , sans-serif !important;
+  font-family: 'Signika' , serif !important;
 }
 ._font-family-secondary {
-  font-family: 'Noto Sans' , serif !important;
+  font-family: 'Noto Sans' , sans-serif !important;
 }
 ._font-size-x-small {
   font-size: 12px !important;
@@ -1179,7 +1179,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: 'Signika' , sans-serif;
+  font-family: 'Signika' , serif;
   font-size: 100%;
   background-color: #fff;
 }
@@ -1207,6 +1207,11 @@ h6 {
 }
 figure {
   margin: 0;
+}
+::placeholder,
+::-moz-placeholder,
+::-webkit-input-placeholder {
+  opacity: 1 !important;
 }
 @font-face {
   font-family: 'icomoon';
@@ -2955,6 +2960,95 @@ body.swal2-iosfix {
     order: 1;
   }
 }
+.about .carousel {
+  width: 100rem;
+  max-width: 100%;
+  margin: 5rem auto;
+  overflow: hidden;
+}
+.about .owl-stage {
+  display: flex;
+}
+.about .owl-nav {
+  display: none;
+}
+.about .owl-dots {
+  margin-top: 2rem;
+}
+.team {
+  margin: 7rem 0;
+}
+.team .grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100rem;
+  max-width: 100%;
+  margin: 5rem auto 0;
+}
+.team .grid figure {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 20rem;
+  border: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+.team .grid h3 {
+  font-size: 2rem;
+  color: #c83d8c;
+  text-align: center;
+  margin: 1rem 0;
+}
+.team .grid span {
+  font-size: 1.6rem;
+  color: #555;
+  font-family: 'Noto Sans' , sans-serif;
+  display: block;
+  text-align: center;
+}
+.grid-blog {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 0;
+}
+.grid-blog .posts-internal {
+  flex-basis: 65%;
+}
+.sidebar {
+  flex-basis: 26%;
+}
+.sidebar h2 {
+  font-size: 2rem;
+  color: #c83d8c;
+}
+.sidebar h2::after {
+  display: block;
+  content: '';
+  margin-top: 1rem;
+  width: 3rem;
+  height: 3px;
+  background: #873c8f;
+}
+.sidebar .group {
+  margin-bottom: 3rem;
+}
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+.sidebar ul li {
+  margin-bottom: 1rem;
+}
+.sidebar ul a {
+  font-size: 1.6rem;
+  color: #555;
+  font-family: 'Noto Sans' , sans-serif;
+  line-height: 1.7;
+  transition: 0.3s;
+}
+.sidebar ul a:hover {
+  color: #c83d8c;
+}
 .card-article {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -2975,9 +3069,81 @@ body.swal2-iosfix {
 .card-article-description {
   font-size: 14px;
 }
+.form-contact {
+  flex-basis: 50%;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.form-contact label {
+  text-transform: uppercase;
+  color: #c83d8c;
+  font-size: 1.3rem;
+}
+.form-contact input,
+.form-contact textarea {
+  margin-bottom: 2rem;
+  height: 3rem;
+  border-width: 0 0 1px 0;
+  border-color: #555;
+  color: #555;
+  font-size: 1.3rem;
+}
+.form-contact textarea {
+  height: 12rem;
+  resize: none;
+  margin-top: 5px;
+}
+.form-contact button {
+  width: 15rem;
+  height: 4rem;
+  background: #c83d8c;
+  color: #fff;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
+  cursor: pointer;
+  align-self: flex-end;
+}
+.form-contact button:hover {
+  background: #a42e71;
+}
+.grid-contact {
+  width: 100rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem auto;
+}
+.info-contact {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 5%;
+  border-right: 1px solid #e6e6e6;
+}
+.info-contact > * {
+  margin-bottom: 2rem;
+}
+.info-contact h3 {
+  font-size: 2rem;
+  color: #c83d8c;
+}
+.info-contact address,
+.info-contact p,
+.info-contact .phone {
+  font-size: 1.8rem;
+  color: #555;
+  font-family: 'Noto Sans' , sans-serif;
+  font-style: normal;
+  text-align: right;
+  line-height: 1.5;
+}
 .heading-main {
   display: block;
-  font-family: 'Noto Sans' , serif;
+  font-family: 'Noto Sans' , sans-serif;
   font-size: 30px;
   font-weight: bold;
   margin: 0;
@@ -3048,57 +3214,9 @@ body.swal2-iosfix {
     flex-basis: 100%;
   }
 }
-.grid-blog-home .right .post {
-  width: 100%;
-  display: block;
-  padding: 1rem;
-  display: flex;
-  border-radius: 5px;
-  transition: 0.3s;
-  margin-bottom: 3rem;
-}
-.grid-blog-home .right .post:hover {
-  background: #a42e71;
-}
-.grid-blog-home .right .post figure {
-  width: 30rem;
-  height: 18rem;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.grid-blog-home .right .post figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-.grid-blog-home .right .post .info {
-  flex: 1;
-  padding: 0 2rem 0 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.grid-blog-home .right .post .info span {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-.grid-blog-home .right .post .info h3 {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #fff;
-  margin-bottom: 1.5rem;
-}
-.grid-blog-home .right .post .info p {
-  font: 1.4rem/2.5rem 'Noto Sans';
-  color: #fff;
-}
 .treatments {
   width: 100%;
-  padding: 7rem 0;
+  padding: 10rem 0;
   border-bottom: 1px solid #e6e6e6;
 }
 .treatments .grid-treatments {
@@ -3119,34 +3237,13 @@ body.swal2-iosfix {
   left: auto;
   right: 0;
 }
-.treatments h2 {
-  font-size: 3rem;
-  font-weight: bold;
-  flex-basis: 15rem;
-  color: #c83d8c;
-  padding-bottom: 1rem;
-  position: relative;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-.treatments h2:after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  content: '';
-  width: 3rem;
-  height: 5px;
-  border-radius: 2px;
-  background: #873c8f;
-}
 .treatments p.subtitle {
   font-size: 1.8rem;
   color: #555;
   max-width: 450px;
   text-align: center;
   margin: 0 auto 6rem;
-  font-family: 'Noto Sans' , serif;
+  font-family: 'Noto Sans' , sans-serif;
 }
 .treatments .carousel {
   flex: 1;
@@ -3200,7 +3297,7 @@ body.swal2-iosfix {
 .treatments .item .info p {
   font-size: 1.6rem;
   color: #555;
-  font-family: 'Noto Sans' , serif;
+  font-family: 'Noto Sans' , sans-serif;
 }
 .treatments .owl-nav {
   display: none;
@@ -3226,6 +3323,15 @@ body.swal2-iosfix {
 }
 .owl-dots .active span {
   background: #a42e71;
+}
+.all {
+  width: 39rem;
+  display: block;
+  font-family: 'Noto Sans' , sans-serif;
+  font-size: 1.8rem;
+  color: #c83d8c;
+  padding: 1rem;
+  margin: 5rem auto 0;
 }
 .section-content {
   padding: 40px 0;
@@ -3313,14 +3419,74 @@ footer .bottom img {
 }
 header {
   width: 100%;
-  height: 10rem;
+}
+header .logo {
+  align-self: center;
 }
 header .grid-header {
   width: 100%;
   height: 10rem;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
+}
+header .grid-header .right {
+  flex-basis: 60%;
+  height: 100%;
+  padding: 2rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+header .grid-header .info {
+  display: flex;
+  justify-content: flex-end;
+}
+header .grid-header .info > * {
+  margin-left: 20px;
+  color: #555;
+  font-size: 1.4rem;
+  font-family: 'Noto Sans' , sans-serif;
+}
+header .grid-header .info > * .fa {
+  color: #c83d8c;
+  font-size: 1.6rem;
+  margin-right: 0.5rem;
+}
+header .grid-header .info form {
+  display: inline;
+}
+header .grid-header .info input {
+  width: 15rem;
+  border-width: 0 0 1px 0;
+  border-color: #ccc;
+  color: inherit;
+}
+.text {
+  width: 70rem;
+  margin: 5rem auto 0;
+}
+.text p {
+  font-size: 1.8rem;
+  line-height: 2;
+  color: #555;
+  font-family: 'Noto Sans' , sans-serif;
+  max-width: 70rem;
+  margin-top: 2rem;
+}
+.text p :first-child {
+  margin-top: 2rem;
+}
+.title-internal {
+  width: 100%;
+  padding: 5rem 0;
+  background-image: linear-gradient(to right, #873c8f, #c83d8c, #ce5198);
+}
+.title-internal h1 {
+  font-size: 4rem;
+  color: #fff;
+  text-align: center;
 }
 .ui-button {
   width: 3.2rem;
@@ -3412,12 +3578,7 @@ select.ui-input {
   color: #8e2862;
 }
 .ui-menu {
-  flex-basis: 60%;
-}
-@media only screen and (max-width: 80em) {
-  .ui-menu {
-    flex-basis: 70%;
-  }
+  width: 100%;
 }
 @media only screen and (max-width: 62em) {
   .ui-menu {
@@ -3558,6 +3719,66 @@ select.ui-input {
   transition: 0.3s;
   display: none;
 }
+.post {
+  width: 100%;
+  display: block;
+  padding: 1rem;
+  display: flex;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-bottom: 3rem;
+}
+.post:hover {
+  background: #a42e71;
+}
+.post figure {
+  width: 30rem;
+  height: 18rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.post figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.post .info {
+  flex: 1;
+  padding: 0 2rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.post .info span {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.post .info h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+.post .info p {
+  font: 1.4rem/2.5rem 'Noto Sans';
+  color: #fff;
+}
+.posts-internal .post:hover {
+  background: #f2f2f2;
+}
+.posts-internal .post span {
+  color: #c83d8c;
+}
+.posts-internal .post h3 {
+  color: #c83d8c;
+}
+.posts-internal .post p {
+  color: #555;
+}
 .ui-select {
   position: relative;
 }
@@ -3580,29 +3801,29 @@ select.ui-input {
   appearance: none;
 }
 .ui-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #2b3340;
-  line-height: 1.2;
-  padding: 0 9rem 1.5rem 0;
+  font-size: 3rem;
+  font-weight: bold;
+  flex-basis: 15rem;
+  color: #c83d8c;
+  padding-bottom: 1rem;
   position: relative;
-  margin: 0;
-  align-self: flex-start;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 .ui-title:after {
-  width: 4rem;
-  height: 5px;
-  border-radius: 4px;
-  content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
-  background: #c83d8c;
-  transition: all 0.2s;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+  width: 3rem;
+  height: 5px;
+  border-radius: 2px;
+  background: #873c8f;
 }
 .ui-logo {
   flex-basis: 30%;
+  align-self: center;
 }
 .ui-logo img {
   width: 22.3rem;

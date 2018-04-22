@@ -10,7 +10,7 @@ if(width > 1050 && width <= 1150){
     stagePadding = 100
 }
 
-$('.carousel').owlCarousel({
+$('.treatments .carousel').owlCarousel({
     items: 3,
     navigation : false,
     //stagePadding: stagePadding,
@@ -33,4 +33,8 @@ $('.prev').click(function () {
 
 $('.next').click(function () {
     $('.carousel').trigger('next.owl.carousel')
+})
+
+$('.about .carousel').owlCarousel({
+    items: 1
 })
